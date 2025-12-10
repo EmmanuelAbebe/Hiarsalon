@@ -1,0 +1,25 @@
+version: "3"
+services:
+  nextjs:
+    build: .
+    ports:
+      - "3000:3000"  # Expose port 3000 to access the app in development mode
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+    environment:
+      - NODE_ENV=development
+    command: ["npm", "run", "dev"]  # Run Next.js in development mode
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

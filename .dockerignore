@@ -1,0 +1,34 @@
+# Node.js modules
+node_modules/
+
+# Next.js build output
+.next/
+
+# Prisma migration files (optional, if you want to exclude migrations for some reason)
+prisma/migrations/
+
+# Docker and configuration files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Git files
+.git/
+.gitignore
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Local environment variables
+.env.local
+
+# Other files you don't need to copy into the image
+README.md
+
+# Prisma client output (if you're generating it locally, might not be needed)
+prisma/generated/
+
+# MacOS specific files
+.DS_Store
