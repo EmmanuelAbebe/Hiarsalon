@@ -1,14 +1,26 @@
+import React, { CSSProperties } from "react";
+
 interface ButtonProps {
-  label: string;
+  label: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  style?: CSSProperties;
 }
 
-const Button = ({ label, onClick, className = "" }: ButtonProps) => {
+const Button = ({
+  label,
+  onClick,
+  className = "text-white bg-blue-500 hover:bg-blue-500",
+  type = "button",
+  style,
+}: ButtonProps) => {
   return (
     <button
-      className={`text-white bg-blue-500 font-bold text-sm p-2 rounded-md w-full mt-4 hover:bg-blue-700 cursor-pointer ${className}`}
+      className={`font-bold text-md px-4 py-2 rounded-md cursor-pointer text-sm ${className}`}
       onClick={onClick}
+      type={type}
+      style={style}
     >
       {label}
     </button>
