@@ -1,7 +1,11 @@
 import React from "react";
 import Button from "./Button";
 
-const SearchInput = () => {
+interface SearchInputProps {
+  placeholder?: string;
+}
+
+const SearchInput = ({ placeholder }: SearchInputProps) => {
   return (
     <form className="w-full">
       <label
@@ -23,8 +27,8 @@ const SearchInput = () => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeWidth={2}
               d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
             />
           </svg>
@@ -33,19 +37,17 @@ const SearchInput = () => {
           type="search"
           id="search"
           className="block w-full rounded-full p-3 ps-9 text-heading text-sm placeholder:text-body border border-gray-300"
-          placeholder="Search"
+          placeholder={placeholder || "Search..."}
           required
         />
         <Button
           label="Search"
           style={{
-            // marginTop: "0px",
             position: "absolute",
             right: "4px",
             bottom: "4px",
             borderRadius: "9999px",
             padding: "9px 12px",
-            // fontSize: "12px",
           }}
         />
       </div>

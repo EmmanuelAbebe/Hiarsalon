@@ -159,8 +159,6 @@ function fmtDayHeader(yyyy_mm_dd: string) {
 }
 
 export default function CalanderPage() {
-  const [view, setView] = useState<"list" | "week">("list");
-
   const bookedMins = useMemo(
     () => MOCK.reduce((sum, a) => sum + a.durationMins, 0),
     []
@@ -176,18 +174,8 @@ export default function CalanderPage() {
       <div className="sticky top-0 z-10 bg-white pt-16 border-b border-gray-200 py-4 space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex items-baseline gap-3">
-            <FaCalendar />
+            <FaCalendar size={20} />
             <div className="text-2xl font-bold text-gray-900">Calendar</div>
-          </div>
-
-          <div className="flex gap-2">
-            <Button
-              label={
-                <span className="flex items-center gap-2">
-                  <IoMdAdd /> <p>New</p>
-                </span>
-              }
-            />
           </div>
         </div>
 
@@ -199,6 +187,13 @@ export default function CalanderPage() {
               <span className="flex items-center gap-2">
                 <FaFilter />
                 <p className="flex justify-center">Filter</p>
+              </span>
+            }
+          />
+          <Button
+            label={
+              <span className="flex items-center gap-2">
+                <IoMdAdd /> <p>New</p>
               </span>
             }
           />
