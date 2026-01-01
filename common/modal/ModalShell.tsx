@@ -53,8 +53,8 @@ export default function ModalShell({
         className="relative w-full max-w-2xl max-h-[calc(100%-2rem)] overflow-auto p-4 outline-none"
       >
         <div className="relative bg-white text-gray-900 border border-gray-200 rounded-2xl shadow-lg p-4 md:p-6">
-          <div className="flex items-center justify-between border-b border-gray-200 pb-4 md:pb-5">
-            <h3 className="text-lg font-bold text-gray-900">{title}</h3>
+          <div className="flex items-center justify-between border-b border-gray-300 pb-2 md:pb-5">
+            <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
             <Button
               label={
                 <>

@@ -253,7 +253,7 @@ const SERVICES: ServiceGroup[] = [
 
 export default function ServicesList() {
   return (
-    <ul className=" max-w-[600px] flex flex-col justify-center m-auto">
+    <ul className="mx-auto px-6 container">
       {SERVICES.map((group) => (
         <li key={group.title}>
           <h1 className="mt-9 text-xl font-bold border-b">{group.title}</h1>

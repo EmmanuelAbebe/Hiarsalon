@@ -13,7 +13,31 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
     () => ({
       openAppointmentDetails: (id) =>
         setState({ kind: "appointment.details", id }),
+
       openAppointmentCreate: () => setState({ kind: "appointment.create" }),
+
+      openServiceDetails: (catagoryid, serviceid) => {
+        setState({ kind: "service.details", catagoryid, serviceid });
+      },
+
+      openServiceCreate: () => setState({ kind: "service.create" }),
+
+      openServiceCatagoryDetails: (catagoryid) => {
+        setState({ kind: "serviceCatagory.details", catagoryid });
+      },
+
+      openServiceCatagoryCreate: () =>
+        setState({ kind: "serviceCatagory.create" }),
+
+      openClientDetails: (id: string) =>
+        setState({ kind: "client.details", id }),
+
+      openClientCreate: () => setState({ kind: "client.create" }),
+
+      openStaffDetails: (id: string) => setState({ kind: "staff.details", id }),
+
+      openStaffCreate: () => setState({ kind: "staff.create" }),
+
       close: () => setState({ kind: "none" }),
     }),
     []

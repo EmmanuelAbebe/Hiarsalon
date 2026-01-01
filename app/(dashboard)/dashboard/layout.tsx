@@ -9,7 +9,11 @@ import { FaCalendar } from "react-icons/fa";
 import { GiOfficeChair } from "react-icons/gi";
 import { IoMdSettings } from "react-icons/io";
 import { LuLogOut } from "react-icons/lu";
-import { MdDashboard, MdOutlinePayment } from "react-icons/md";
+import {
+  MdDashboard,
+  MdHomeRepairService,
+  MdOutlinePayment,
+} from "react-icons/md";
 import Button from "@/common/Button";
 
 function DashboardMenuItem({
@@ -25,7 +29,7 @@ function DashboardMenuItem({
     <li className="mb-2">
       <Link
         href={`/dashboard${href}`}
-        className="text-purple-600 font-bold hover:bg-purple-600 hover:text-white hover:font-bold w-full p-2 rounded flex items-center gap-2"
+        className="text-gray-800 font-bold hover:bg-blue-500 hover:text-white hover:font-bold w-full p-2 rounded flex items-center gap-2"
       >
         {icon}
         <p className="p-1">{label}</p>
@@ -69,7 +73,7 @@ export default function DashboardGroupLayout({
             <DashboardMenuItem
               label="Services"
               href="/serivces"
-              icon={<GiOfficeChair />}
+              icon={<MdHomeRepairService />}
             />
             <DashboardMenuItem
               label="payments"
@@ -88,13 +92,15 @@ export default function DashboardGroupLayout({
                   <p>Logout</p>
                 </>
               }
-              className="text-white bg-purple-500 font-bold text-sm p-2 rounded-md w-full mt-4 hover:bg-purple-700 flex items-center gap-2"
+              className="text-white bg-blue-500 font-bold text-sm p-2 rounded-md w-full mt-4 hover:bg-blue-400 flex items-center gap-2"
             />
           </ul>
         </nav>
       </aside>
-      <main className="flex-1 px-16 min-h-0 overflow-y-auto">
-        <DashboardClientProviders>{children}</DashboardClientProviders>
+      <main className="min-h-0 overflow-y-auto flex-1">
+        <div className="container mx-auto px-4">
+          <DashboardClientProviders>{children}</DashboardClientProviders>
+        </div>
       </main>
     </div>
   );

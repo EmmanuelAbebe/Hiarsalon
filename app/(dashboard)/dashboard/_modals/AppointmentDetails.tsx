@@ -121,33 +121,33 @@ export default function AppointmentDetails({
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col gap-2">
           <div className="text-sm font-bold text-gray-900">Time</div>
-          <div className="text-gray-700">{detail.time}</div>
+          <div className="text-gray-700 ps-6">{detail.time}</div>
         </div>
 
         <div className="flex flex-col gap-2">
           <div className="text-sm font-bold text-gray-900">Status</div>
-          <div className="text-gray-700">{detail.status}</div>
+          <div className="text-gray-700 ps-6">{detail.status}</div>
         </div>
 
         <div className="col-span-2 flex flex-col gap-2">
           <div className="text-sm font-bold text-gray-900">Client</div>
-          <div className="text-gray-700">{detail.client}</div>
+          <div className="text-gray-700 ps-6">{detail.client}</div>
         </div>
 
         <div className="col-span-2 flex flex-col gap-2">
           <div className="text-sm font-bold text-gray-900">Services</div>
-          <div className="text-gray-700">{detail.services.join(", ")}</div>
+          <div className="text-gray-700 ps-6">{detail.services.join(", ")}</div>
         </div>
 
         <div className="flex flex-col gap-2">
           <div className="text-sm font-bold text-gray-900">Duration</div>
-          <div className="text-gray-700">{detail.durationMins} mins</div>
+          <div className="text-gray-700 ps-6">{detail.durationMins} mins</div>
         </div>
 
         {detail.notes && (
           <div className="col-span-2 flex flex-col gap-2">
             <div className="text-sm font-bold text-gray-900">Notes</div>
-            <div className="text-gray-700">{detail.notes}</div>
+            <div className="text-gray-700 ps-6">{detail.notes}</div>
           </div>
         )}
       </div>
